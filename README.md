@@ -16,7 +16,7 @@ Daha sonrasında çekilen veriler bir csv dosyasına aktarılarak işlenmeye haz
 
 
 Verilerin işlenmesi
-Başka bir python dosyasında içeri aktarılan veriler bir temizleme fonksiyonundan geçmektedir. Screenshot_3
+Başka bir python dosyasında içeri aktarılan veriler bir temizleme fonksiyonundan geçmektedir. 
 Bu temizleme fonksiyonunda verilerin içindeki sayılar ve bazı kelimeler herhangi bir anlam ifade etmediğinden verimizin içinden çıkarılmıştır.
 Devamında noktalama işaretlerinden de ayıklanan tweetlerimiz clean sütunu altına yazılmıştır.
 Algoritmamızın düzgün çalışabilmesi için tweetleri etiketlememiz gerekmektedir.
@@ -27,13 +27,13 @@ Algoritmamızın düzgün çalışabilmesi için tweetleri etiketlememiz gerekme
 * Netflix: 3
 
 Yukarıdaki etiketlemeye sadık kalarak verilerimizi etiketliyoruz.
-Screenshot_4
+
 
 
 Verilerden elde edeceğimiz analiz için TF-IDF, Bayes teoremi ve Decision Tree algoritmalarını kullanıyoruz.
 Projemiz artık bitmiş durumda verilen bir Tweet'in 4 kullanıcıdan hangilerine ait olabileceğini sağlıklı bir şekilde oransallaştırabilmektedir.
 
-Screenshot_5 Projemize son olarak Netflix'in eskiden attığı önerdiğim diziyi izledin mi diyorum bana nau nau diyor Tweet'ini veriyoruz ve bize aşağıdaki sonuçları veriyor.
+Projemize son olarak Netflix'in eskiden attığı önerdiğim diziyi izledin mi diyorum bana nau nau diyor Tweet'ini veriyoruz ve bize aşağıdaki sonuçları veriyor.
 
 * Acun Ilıcalı: %0.56
 * Rasim Ozan Kütahyalı: %6.95
