@@ -33,7 +33,7 @@ Yukarıdaki etiketlemeye sadık kalarak verilerimizi etiketliyoruz.
 Verilerden elde edeceğimiz analiz için TF-IDF, Bayes teoremi ve Decision Tree algoritmalarını kullanıyoruz.
 Projemiz artık bitmiş durumda verilen bir Tweet'in 4 kullanıcıdan hangilerine ait olabileceğini sağlıklı bir şekilde oransallaştırabilmektedir.
 
-Projemize son olarak Netflix'in eskiden attığı önerdiğim diziyi izledin mi diyorum bana nau nau diyor Tweet'ini veriyoruz ve bize aşağıdaki sonuçları veriyor.
+Projemize son olarak Netflix'in eskiden attığı   'önerdiğim diziyi izledin mi diyorum bana nau nau diyor'  Tweet'ini veriyoruz ve bize aşağıdaki sonuçları veriyor.
 
 * Acun Ilıcalı: %0.56
 * Rasim Ozan Kütahyalı: %6.95
