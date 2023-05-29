@@ -6,7 +6,7 @@ Projenin Kullanım Alanları
 
 
 
-Twitter'dan Veri Çekmek
+Twitter'dan Veri Çekmek --
 Veri çekerken pythonda bulunan snscrape kütüphanesi kullanılmıştır.
 Bu kütüphane temel olarak Twitter'da bulunana Advanced Search alanının yazılıma implemente edilmiş halidir.
 
@@ -15,7 +15,7 @@ Verilen örnekte netflixturkiye kullanıcı adına sahip twitter hesabından 01.
 Daha sonrasında çekilen veriler bir csv dosyasına aktarılarak işlenmeye hazır hale getirilmektedir.
 
 
-Verilerin işlenmesi
+Verilerin işlenmesi --
 Başka bir python dosyasında içeri aktarılan veriler bir temizleme fonksiyonundan geçmektedir. 
 Bu temizleme fonksiyonunda verilerin içindeki sayılar ve bazı kelimeler herhangi bir anlam ifade etmediğinden verimizin içinden çıkarılmıştır.
 Devamında noktalama işaretlerinden de ayıklanan tweetlerimiz clean sütunu altına yazılmıştır.
