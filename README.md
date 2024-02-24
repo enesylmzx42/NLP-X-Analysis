@@ -1,41 +1,51 @@
-Bu projede Twitter'dan çekilen verilerle oluşturulan veritabanı kullanılarak, girilen alternatif bir Tweet'in kime ait olabileceği yüzdesel olarak tahmin edilmektedir.
+# Twitter User Prediction Project
 
-Projenin Kullanım Alanları
-- Bir tweetin daha önce birisi tarafından paylaşılmış olma ihtimali hesaplanabilir.
-- Daha önce paylaşılmamış bir tweetin hangi kullanıcı tarafından yazılmış olabileceği tahmin edilebilir.
-
-
-
-Twitter'dan Veri Çekmek --
-Veri çekerken pythonda bulunan snscrape kütüphanesi kullanılmıştır.
-Bu kütüphane temel olarak Twitter'da bulunana Advanced Search alanının yazılıma implemente edilmiş halidir.
-
-query = "(from:netflixturkiye) until:2023-01-01 since:2021-01-01"
-Verilen örnekte netflixturkiye kullanıcı adına sahip twitter hesabından 01.01.2021 - 01.01.2023 tarihleri arasındaki tüm tweetleri görmek isteyeceğimiz bir sorgu gösterilmektedir.
-Daha sonrasında çekilen veriler bir csv dosyasına aktarılarak işlenmeye hazır hale getirilmektedir.
+This project involves predicting the percentage likelihood of an entered alternative tweet belonging to a specific user using a database created with data collected from Twitter.
+<br>
+<br>
+## Project Applications
+- Probability calculation of a tweet being shared by someone else.
+- Prediction of which user might have written an unpublished tweet.
 
 
-Verilerin işlenmesi --
-Başka bir python dosyasında içeri aktarılan veriler bir temizleme fonksiyonundan geçmektedir. 
-Bu temizleme fonksiyonunda verilerin içindeki sayılar ve bazı kelimeler herhangi bir anlam ifade etmediğinden verimizin içinden çıkarılmıştır.
-Devamında noktalama işaretlerinden de ayıklanan tweetlerimiz clean sütunu altına yazılmıştır.
-Algoritmamızın düzgün çalışabilmesi için tweetleri etiketlememiz gerekmektedir.
+## Retrieving Data from Twitter
 
-* Acun Ilıcalı: 0
-* Rasim Ozan Kütahyalı: 1
-* Webtekno: 2
-* Netflix: 3
-
-Yukarıdaki etiketlemeye sadık kalarak verilerimizi etiketliyoruz.
+Data retrieval is performed using the snscrape library available in Python. This library is essentially an implementation of the Advanced Search feature on Twitter within a programming environment.<br><br>
+In this example, the query aims to fetch all tweets from the Twitter account with the username "netflixturkiye" between January 1, 2021, and January 1, 2023. Following the data retrieval, the obtained information is exported to a CSV file for further processing.
+<br>
+<br>
 
 
 
-Verilerden elde edeceğimiz analiz için TF-IDF, Bayes teoremi ve Decision Tree algoritmalarını kullanıyoruz.
-Projemiz artık bitmiş durumda verilen bir Tweet'in 4 kullanıcıdan hangilerine ait olabileceğini sağlıklı bir şekilde oransallaştırabilmektedir.
+## Data Preprocessing
 
-Projemize son olarak Netflix'in eskiden attığı   'önerdiğim diziyi izledin mi diyorum bana nau nau diyor'  Tweet'ini veriyoruz ve bize aşağıdaki sonuçları veriyor.
+In another Python script, the imported data undergoes a cleaning process. The cleaning function removes numbers, certain meaningless words, and punctuation from the tweets. The cleaned tweets are then stored in the 'clean' column of the dataset.
 
-* Acun Ilıcalı: %0.56
-* Rasim Ozan Kütahyalı: %6.95
-* Webtekno: %4.92
-* Netflix: %87.57
+To facilitate the proper functioning of our algorithm, we need to label the tweets according to the following scheme:
+
+- Acun Ilıcalı: 0
+- Rasim Ozan Kütahyalı: 1
+- Webtekno: 2
+- Netflix: 3
+
+## Analysis using Machine Learning Algorithms
+
+For the analysis of the data, we employ TF-IDF, Bayes theorem, and Decision Tree algorithms. The project is now completed, and it can accurately proportion the likelihood of a given tweet belonging to one of the four users.
+<br>
+## Classification Results
+
+As a final step, we provide the project with a tweet from Netflix's past: "önerdiğim diziyi izledin mi diyorum bana nau nau diyor." The results of the classification are as follows:
+
+- Acun Ilıcalı: 0.56%
+- Rasim Ozan Kütahyalı: 6.95%
+- Webtekno: 4.92%
+- Netflix: 87.57%
+
+## Usage
+
+1. Ensure you have the required libraries installed: `snscrape`, `pandas`, `scikit-learn`.
+2. Run the data retrieval script.
+3. Run the data preprocessing script.
+4. Utilize the machine learning algorithms for analysis.
+
+Feel free to explore and adapt the code according to your needs!
