@@ -1,7 +1,8 @@
 # Tweet Analysis
 <br>
 
-![tweet_analysis_introduction](https://github.com/0mustafa/NLP_tweet_analysis_system/assets/78226423/a0a08178-ddd8-4452-9323-4aec5d8a4e26)
+![dd](https://github.com/enesylmzx42/CNN-LetterRecognition-JS-Flask/assets/117593621/8e83be33-d02d-4a68-a99e-7c79d0bf84d3)
+
 <br>
 <br>
 <br>
@@ -29,7 +30,8 @@ In the given example, a query is shown where we want to see all tweets from the 
 The imported data in another Python file undergoes a cleaning function.
 <br>
 <br>
-![Screenshot_3](https://user-images.githubusercontent.com/78226423/210452126-2dc6ae3a-60ab-41fc-beca-5031be8228dd.png)
+![nlp](https://github.com/enesylmzx42/NLP-X-Analysis/assets/117593621/652bccef-3161-49b7-9783-72813ddb8d26)
+
 <br>
 <br/> In this cleaning function, numbers and some words in the data are removed as they do not convey any meaningful information.
 <br/> Then, the tweets, also stripped of punctuation marks, are written under the `clean` column.
