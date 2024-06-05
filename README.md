@@ -1,51 +1,71 @@
-# Twitter User Prediction Project
+# Tweet Analysis
+<br>
 
-This project involves predicting the percentage likelihood of an entered alternative tweet belonging to a specific user using a database created with data collected from Twitter.
+![tweet_analysis_introduction](https://github.com/0mustafa/NLP_tweet_analysis_system/assets/78226423/a0a08178-ddd8-4452-9323-4aec5d8a4e26)
 <br>
 <br>
-## Project Applications
-- Probability calculation of a tweet being shared by someone else.
-- Prediction of which user might have written an unpublished tweet.
-
-
-## Retrieving Data from Twitter
-
-Data retrieval is performed using the snscrape library available in Python. This library is essentially an implementation of the Advanced Search feature on Twitter within a programming environment.<br><br>
-In this example, the query aims to fetch all tweets from the Twitter account with the username "netflixturkiye" between January 1, 2021, and January 1, 2023. Following the data retrieval, the obtained information is exported to a CSV file for further processing.
+<br>
+In this project, using a database created with data pulled from Twitter, the ownership of an alternative Tweet can be estimated as a percentage.
 <br>
 <br>
 
+## Use Cases of the Project
+- The likelihood of a tweet having been shared by someone before can be calculated.
+- It can predict which user might have written a tweet that has not been shared before.
+<br/><br/><br/>
 
+## Fetching Data from Twitter
+The `snscrape` library in Python was used for data scraping.<br/> This library is essentially the software-implemented version of Twitter's `Advanced Search` feature.
 
-## Data Preprocessing
+```
+query = "(from:netflixturkiye) until:2023-01-01 since:2021-01-01"
+```
 
-In another Python script, the imported data undergoes a cleaning process. The cleaning function removes numbers, certain meaningless words, and punctuation from the tweets. The cleaned tweets are then stored in the 'clean' column of the dataset.
+In the given example, a query is shown where we want to see all tweets from the Twitter account with the username `netflixturkiye` between the dates `01.01.2021 - 01.01.2023`.
+<br/> Subsequently, the fetched data is transferred to a CSV file, making it ready for processing.
+<br/><br/>
 
-To facilitate the proper functioning of our algorithm, we need to label the tweets according to the following scheme:
-
-- Acun Ilıcalı: 0
-- Rasim Ozan Kütahyalı: 1
-- Webtekno: 2
-- Netflix: 3
-
-## Analysis using Machine Learning Algorithms
-
-For the analysis of the data, we employ TF-IDF, Bayes theorem, and Decision Tree algorithms. The project is now completed, and it can accurately proportion the likelihood of a given tweet belonging to one of the four users.
+## Processing the Data
+The imported data in another Python file undergoes a cleaning function.
 <br>
-## Classification Results
+<br>
+![Screenshot_3](https://user-images.githubusercontent.com/78226423/210452126-2dc6ae3a-60ab-41fc-beca-5031be8228dd.png)
+<br>
+<br/> In this cleaning function, numbers and some words in the data are removed as they do not convey any meaningful information.
+<br/> Then, the tweets, also stripped of punctuation marks, are written under the `clean` column.
+<br/> For our algorithm to work correctly, we need to label the tweets.
+<br/>
 
-As a final step, we provide the project with a tweet from Netflix's past: "önerdiğim diziyi izledin mi diyorum bana nau nau diyor." The results of the classification are as follows:
+```
+* Acun Ilıcalı: 0
+* Rasim Ozan Kütahyalı: 1
+* Webtekno: 2
+* Netflix: 3
+```
 
-- Acun Ilıcalı: 0.56%
-- Rasim Ozan Kütahyalı: 6.95%
-- Webtekno: 4.92%
-- Netflix: 87.57%
+<br/> We label our data according to the labeling above.
+<br/>
 
-## Usage
+![Screenshot_4](https://user-images.githubusercontent.com/78226423/210455971-670e4385-9498-47ed-b119-8e375de1fd02.png)
+<br/>
+<br>
+<br>
 
-1. Ensure you have the required libraries installed: `snscrape`, `pandas`, `scikit-learn`.
-2. Run the data retrieval script.
-3. Run the data preprocessing script.
-4. Utilize the machine learning algorithms for analysis.
+We use `TF-IDF`, `Bayes theorem`, and `Decision Tree` algorithms for the analysis we will obtain from the data.
+<br/> Our project is now completed and can effectively estimate to which of the 4 users a given Tweet might belong.
+<br/>
 
-Feel free to explore and adapt the code according to your needs!
+![Screenshot_5](https://user-images.githubusercontent.com/78226423/210456303-2c421dbb-0a9c-4570-afe2-7e68a7041f48.png)
+<br>
+<br>
+<br>
+
+Finally, we input Netflix's old Tweet `önerdiğim diziyi izledin mi diyorum bana nau nau diyor` into our project, and it gives us the following results.
+<br/>
+
+```
+* Acun Ilıcalı: %0.56
+* Rasim Ozan Kütahyalı: %6.95
+* Webtekno: %4.92
+* Netflix: %87.57
+```
