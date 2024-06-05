@@ -53,7 +53,7 @@ The imported data in another Python file undergoes a cleaning function.
 <br>
 <br>
 
-We use `TF-IDF`, `Bayes theorem`, and `Decision Tree` algorithms for the analysis we will obtain from the data.
+We use `TF-IDF` and `Bayes theorem` algorithms for the analysis we will obtain from the data.
 <br/> Our project is now completed and can effectively estimate to which of the 4 users a given Tweet might belong.
 <br/>
 
